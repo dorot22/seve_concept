@@ -18,9 +18,12 @@ imageContainers.forEach((element) => {
         document.querySelector('nav').style.filter = 'blur(5px)';
         document.querySelector('footer').style.filter = 'blur(5px)';
         document.querySelector('#accomplishment').style.filter = 'blur(5px)';
-        document.querySelector('#presentation').style.filter = 'blur(5px)';
+        document.querySelector('#welcome').style.filter = 'blur(5px)';
+        
+        // document.querySelector('#presentation').style.filter = 'blur(5px)';
         imageFocus.style.filter = 'none';
-        imageFocus.style.width = '50%';
+        imageFocus.style.width = '70%';
+        imageFocus.style.height = 'auto';
         imageFocus.style.margin = 'auto';
         imageFocus.style.padding = '1%';
         imageFocus.style.backgroundColor = '#e3cd8bad';
@@ -47,7 +50,7 @@ document.addEventListener('click', (event) => {
             document.querySelector('nav').style.filter = 'blur(0)';
             document.querySelector('footer').style.filter = 'blur(0)';
             document.querySelector('#accomplishment').style.filter = 'blur(0)';
-            document.querySelector('#presentation').style.filter = 'blur(0)';
+            document.querySelector('#welcome').style.filter = 'blur(0)';
             imageFocus = '';
         }
     }
@@ -96,7 +99,8 @@ function scrollPhoto(direction) {
     // newPhotoDescriptionFocus.style.display = 'block';
     var newimageFocus = imageRef.cloneNode();
     console.log(newimageFocus)
-    newimageFocus.style.width = '50%';
+    newimageFocus.style.width = '70%';
+    newimageFocus.style.height = 'auto';
     newimageFocus.style.margin = 'auto';
     newimageFocus.style.padding = '1%';
     newimageFocus.style.backgroundColor = '#e3cd8bad';
@@ -108,3 +112,20 @@ function scrollPhoto(direction) {
     // photoDescriptionFocus = newPhotoDescriptionFocus
 
 }
+
+const navbar = document.querySelector('nav');
+const logoTitleImgScrolled = document.querySelector('.logoTitle img');
+const logoTitleH1Scrolled = document.querySelector('.logoTitle h1');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('navBarScrolled');
+    logoTitleImgScrolled.classList.add('logoTitleImgScrolled');
+    logoTitleH1Scrolled.classList.add('logoTitleH1Scrolled');
+
+  } else {
+    navbar.classList.remove('navBarScrolled');
+    logoTitleImgScrolled.classList.remove('logoTitleImgScrolled');
+    logoTitleH1Scrolled.classList.remove('logoTitleH1Scrolled');
+  }
+});
