@@ -133,8 +133,8 @@ div.gallery:hover {
     display: none;
     text-align: center;
     background-color: #e3cd8bad;
-    width: auto;
-    margin: 1% auto;
+    width: 20%;
+    margin: auto;
     padding: 1%;
     color: #5D7052;
     font-size: 20px;
@@ -143,5 +143,5 @@ div.gallery:hover {
 }
 
 #pictureAndDescriptionFocus{
-    display: ruby;
+    display: flex;
 }
