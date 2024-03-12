@@ -39,9 +39,7 @@ imageContainers.forEach((element) => {
 
 document.addEventListener('click', (event) => {
     if (imageFocus != '') {
-        console.log(event.target)
         if (!Array.from(imageContainers).some(container => container.contains(event.target)) && !rightArrow.contains(event.target) && !leftArrow.contains(event.target)) {
-            console.log(41)
             isFocus = false;
             body.style.backgroundColor = 'transparent';
             divImageFocus.style.display = "none";
@@ -94,11 +92,8 @@ function scrollPhoto(direction) {
             imageRef = allPhotos[indice - 1]
         }
     }
-    console.log(imageRef)
-    // var newPhotoDescriptionFocus = imageRef.nextElementSibling.cloneNode(true);
-    // newPhotoDescriptionFocus.style.display = 'block';
+
     var newimageFocus = imageRef.cloneNode();
-    console.log(newimageFocus)
     newimageFocus.style.width = '70%';
     newimageFocus.style.height = 'auto';
     newimageFocus.style.margin = 'auto';
@@ -107,9 +102,7 @@ function scrollPhoto(direction) {
     newimageFocus.style.display = 'block';
     newimageFocus.style.clipPath = 'none';
     pictureAndDescriptionFocus.replaceChild(newimageFocus, imageFocus);
-    // pictureAndDescriptionFocus.replaceChild(newPhotoDescriptionFocus, photoDescriptionFocus);
     imageFocus = newimageFocus
-    // photoDescriptionFocus = newPhotoDescriptionFocus
 
 }
 
@@ -118,7 +111,7 @@ const logoTitleImgScrolled = document.querySelector('.logoTitle img');
 const logoTitleH1Scrolled = document.querySelector('.logoTitle h1');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
+  if (window.scrollY > 2) {
     navbar.classList.add('navBarScrolled');
     logoTitleImgScrolled.classList.add('logoTitleImgScrolled');
     logoTitleH1Scrolled.classList.add('logoTitleH1Scrolled');

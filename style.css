@@ -72,6 +72,7 @@ nav h1 {
 .onglets a {
     color: #E3CD8B;
     margin: 5px;
+    font-size: 25px;
     font-family: "Saira Condensed", sans-serif;
 }
 
@@ -238,6 +239,10 @@ footer {
     min-height: 70%;
 }
 
+.imagefocus i {
+    font-size: 48px
+}
+
 @media screen and (max-width:680px) {
     #welcome{
         flex-direction: column;
@@ -263,19 +268,25 @@ footer {
         flex-direction: column;
     }
 
-    .logoTitle{
-        justify-content: center
+    .onglets, .socialNetworks{
+        display: none;
     }
 
     .album {
         height: 100%;
         width: auto;
-        clip-path:none;
+        margin-left: 30%;
+        clip-path: xywh(5px 20px 300px 250px round 18% 0);
     }
 
     #pictureAndDescriptionFocus {
         display: flex;
         flex-direction: column;
+        align-content: stretch;
+        align-items: stretch;
+        height: max-content;
+        margin-top: 5%;
+        width: 68%;
     }
 
     .photoDescription {
@@ -284,9 +295,11 @@ footer {
         background-color: #e3cd8bd2;
         width: 81%;
         margin: auto;
+        margin-top: 20%;
         padding: 1%;
         color: #5D7052;
         font-family: "Saira Condensed", sans-serif;
+        font-size: smaller;
     }
 
     .logoTitle img {
@@ -295,6 +308,14 @@ footer {
 
     .logoTitle h1 {
        font-size: 20px;
+    }
+
+    .imagefocus i {
+        font-size: 28px
+    }
+
+    .imagefocus {
+        justify-content: normal;
     }
 }
 
