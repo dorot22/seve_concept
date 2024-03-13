@@ -19,8 +19,6 @@ imageContainers.forEach((element) => {
         document.querySelector('footer').style.filter = 'blur(5px)';
         document.querySelector('#accomplishment').style.filter = 'blur(5px)';
         document.querySelector('#welcome').style.filter = 'blur(5px)';
-        
-        // document.querySelector('#presentation').style.filter = 'blur(5px)';
         imageFocus.style.filter = 'none';
         imageFocus.style.width = '70%';
         imageFocus.style.height = 'auto';

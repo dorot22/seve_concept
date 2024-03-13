@@ -26,21 +26,24 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1;
-
+    transition: background-color 2s, border-bottom 2s ;
     /* background-color: #5D7052; */
 }
 
 .navBarScrolled {
     background-color: #5D7052;
     border-bottom: 5px solid #E3CD8B;
+    transition: background-color 2s, border-bottom 2s ;
 }
 
 .logoTitleImgScrolled {
     width: 50px;
+    transition: width 2s;
  }
 
  .logoTitleH1Scrolled {
     font-size: 20px;
+    transition:font-size 2s
  }
 
 
@@ -55,6 +58,14 @@ nav a {
     align-items: center;
     width: 50%;
 }
+
+.logoTitle img {
+    transition: width 2s;
+ }
+
+ .logoTitle h1 {
+    transition: font-size 2s;
+ }
 
 nav img {
     width: 100px;
@@ -182,7 +193,6 @@ footer {
     align-content: center;
     justify-content: space-around;
     align-items: center;
-    /* clip-path: xywh(5px 20px 500px 250px round 18% 0); */
 }
 
 #text_presentation {
