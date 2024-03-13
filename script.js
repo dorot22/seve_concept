@@ -109,7 +109,7 @@ const logoTitleImgScrolled = document.querySelector('.logoTitle img');
 const logoTitleH1Scrolled = document.querySelector('.logoTitle h1');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 2) {
+  if (window.scrollY > 50) {
     navbar.classList.add('navBarScrolled');
     logoTitleImgScrolled.classList.add('logoTitleImgScrolled');
     logoTitleH1Scrolled.classList.add('logoTitleH1Scrolled');
